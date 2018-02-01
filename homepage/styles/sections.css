@@ -1,0 +1,39 @@
+main
+{
+  padding-top: 0px;
+}
+
+#contenttop, #contentleft, #contentright, #contentcenter
+{
+    padding: 20px;
+    font-size: 30px;
+    color: black;
+}
+
+#contenttop
+{
+  height: 100px;
+  background-color: #FE5F55
+}
+#contentleft
+{
+  height: 400px;
+  background-color: #F0B67F
+}
+#contentcenter
+{
+  height: 400px;
+  background-color: #D6D1B1
+}
+#contentright
+{
+  height: 400px;
+  background-color: #C7EFCF
+}
+
+#header_maintenance
+{
+    text-align: center;
+    background-color: red;
+    color: black;
+}

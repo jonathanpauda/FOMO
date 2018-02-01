@@ -1,0 +1,101 @@
+    1  cd
+    2  rm -rf s1
+    3  mkdir s1
+    4  cd s1
+    5  ls
+    6  pip3
+    7  first
+    8  mkdir first
+    9  cd first
+   10  ls
+   11  pip3
+   12  venv/bin/activate
+   13  source/venv/bin/activate
+   14  ls
+   15  virtual venv
+   16  ls venv
+   17  python3
+   18  python
+   19  cd s1/first/mysite
+   20  ls
+   21  manage.py
+   22  cd manage.py
+   23  python manage.py runserver
+   24  python3 manage.py migrate
+   25  python manage.py runserver
+   26  venv/bin/activate
+   27  cd ...
+   28  cd ..
+   29  ls
+   30  venv/bin/activate
+   31  source venv/bin/activate
+   32  ls venv/bin
+   33  pip3 install django-mako-plus
+   34  python3 manage.py runserver
+   35  cd mysite
+   36  python test.py
+   37  python manage.py runserver
+   38  ls
+   39  python3 manage.py runserver
+   40  cd s1/first
+   41  ls
+   42  cd ..
+   43  cd
+   44  ls
+   45  cd s1
+   46  cd
+   47  ls
+   48  mkdir s0
+   49  cd s0
+   50  mkdir first
+   51  cd first
+   52  ls
+   53  cd ..
+   54  ls
+   55  pip3
+   56  cd first
+   57  ls
+   58  pip3
+   59  source/venv/bin/activate
+   60  ls
+   61  source venv/bin/activate
+   62  ls
+   63  python3
+   64  cd
+   65  ls
+   66  s0
+   67  cd so
+   68  cd s0
+   69  ls
+   70  first
+   71  cd first
+   72  source venv/bin/activate
+   73  ls
+   74  pip3
+   75  source venv/bin/activate
+   76  pip3
+   77  pip3 install virtualenv
+   78  ls
+   79  virtualenv .
+   80  ls
+   81  virtual venv
+   82  virtualenv venv
+   83  ls
+   84  source venv/bin/activate
+   85  pip3 install django-mako-plus
+   86  python3 -m django startproject --template=http://cdn.rawgit.com/doconix/django-mako-plus/master/project_template.zip coolsite
+   87  cd coolsite
+   88  ls
+   89  python3 manage.py migrate
+   90  ls
+   91  python3 manage.py startapp --template=http://cdn.rawgit.com/doconix/django-mako-plus/master/app_template.zip --extension=py,htm,html homepage
+   92  ls
+   93  cd coolsite
+   94  ls
+   95  open settings.py
+   96  python3 manage.py runserver
+   97  ls
+   98  cd ..
+   99  ls
+  100  python3 manage.py runserver
+  101  history>notes2.text

@@ -6,7 +6,7 @@ from django import forms
 @view_function
 def process_request(request):
     #log the user out
-    logout()
+    logout(request)
     return HttpResponseRedirect('/account/')
 
 

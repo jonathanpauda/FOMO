@@ -1,7 +1,9 @@
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect
 from django_mako_plus import view_function
 from django import forms
+from formlib import Formless
+import re
 
 @view_function
 def process_request(request):
@@ -13,13 +15,13 @@ def process_request(request):
 
     #render the template
     return request.dmp_render('login.html', {
-        'form: form,'
+        'form': form,
     })
-class MyForm(forms.Form):
+class MyForm(Formless):
 
     def init(self):
         self.fields['email'] = forms.CharField(label= 'Email')
-        self.fields['password'] = forms.password(label= 'Password')
+        self.fields['password'] = forms.CharField(label= 'Password', widget=forms.PasswordInput())
         self.user = None
 
     def clean(self):

@@ -8,31 +8,76 @@
 
         ## add any site-wide scripts or CSS here; for example, jquery:
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!--<script src="${ STATIC_URL }homepage/media/bootstrap-4.0.0/js/bootstrap.js"></script>-->
+        <!--<link rel="stylesheet" href="${ STATIC_URL }homepage/media/bootstrap-4.0.0/css/bootstrap.min.css" />-->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
         ## render the static file links with the same name as this template
         <script src="/django_mako_plus/dmp-common.min.js"></script>
         ${ django_mako_plus.links(self) }
 
-        <script src="${ STATIC_URL }homepage/media/bootstrap/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="${ STATIC_URL }homepage/media/bootstrap/css/boostrap.min.css">
-        <link rel="stylesheet" href="${ STATIC_URL }homepage/media/bootstrap/css/boostrap-theme.min.css">
+
+
         <link rel="icon" type="image/png" href="${ STATIC_URL }homepage/media/sleeping.png">
     </head>
 
-
-        <header>
-
-            <div id = "header_maintenance">
+        <div id = "header_maintenance">
                 <%block name = "header_maintenance">
                 </%block>
 
             </div>
 
-            <nav class="navbar">
-                <a class = "navbar-brand" href="/homepage"><img src="${ STATIC_URL }homepage/media/sleeping.png"/></a>
-                <%block name = "menu">
+        <header>
 
-            </%block>
+             <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+              <!-- Brand -->
+              <a class="navbar-brand" href="/#/"><img src="/static/homepage/media/sleeping.png"></a>
+                     <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/terms/">Terms</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/about/">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/contact/">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/faq/">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/sections/">Sections</a>
+                    </li>
+                    <!-- Dropdown -->
+                         %if request.user.is_authenticated:
+
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        ${request.user.email}
+                      </a>
+                      <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/account/logout/">Logout</a>
+                      </div>
+                        %else:
+                        <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Account
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/account/login/">Login</a>
+                        <a class="dropdown-item" href="/account/signup/">Signup</a>
+                      </div>
+                        %endif
+                    </li>
+                  </ul>
+
+
+              <!-- Links -->
             </nav>
 
         </header>

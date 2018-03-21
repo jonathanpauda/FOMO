@@ -11,15 +11,15 @@ class LastFiveMiddleware:
         request.last_five=[]
 
         for p in recent_list:
-            request.last_five.append(cmod.Product.Objects.get(id=p))
+            request.last_five.append(cmod.Product.objects.get(id=p))
 
         response = self.get_response(request)
 
-    
+
 
         last_five_ids = []
-        for r in request.last_five:
-            last_five_ids.append(r.id)
+        for p in request.last_five:
+            last_five_ids.append(p.id)
 
         request.session['last_five'] = last_five_ids
 

@@ -1,0 +1,20 @@
+<%inherit file="/catalog/templates/app_base.htm" />
+
+
+<%block name="centercontent">
+<h1>${prod.name}</h1>
+<div id = "leftThumbnails">
+    <div>
+        %for p in prod.image_urls():
+            <img class = "thumbnails" src ="${p[0]}" style="width:100px;">
+        %endfor
+    </div>
+    <ul>
+
+    </ul>
+</div>
+<img class="" src=${prod.image_url()} alt = "${prod.name}">
+<a class ="btn btn-success">Buy now!</a>
+<div><p>${prod.description}</p></div>
+
+</%block>

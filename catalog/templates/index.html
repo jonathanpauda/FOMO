@@ -1,0 +1,21 @@
+<%inherit file="/catalog/templates/app_base.htm" />
+
+<%block name="centercontent">
+<h1 class="text-center">${category_name}</h1>
+<div class='row'>
+  <div class="col-sm-9">
+      <div id="paginator" class="text-right">
+        <a id="previous_page">
+          <<<
+        </a>
+        Page <span id="page_number">1</span> of <span id="numPages">${ num_pages }</span>
+        <a id="next_page" >
+          >>>
+        </a>
+      </div>
+      <div id="catalog_container">
+        <div id="catalog"></div>
+      </div>
+    </%block>
+  </div>
+</div>

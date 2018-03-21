@@ -14,7 +14,7 @@ def process_request(request):
         return HttpResponseRedirect('/account/')
 
     #render the template
-    return request.dmp_render('login.html', {
+    return request.dmp.render('login.html', {
         'form': form,
     })
 class MyForm(Formless):

@@ -1,0 +1,27 @@
+#catalog{
+  list-style: none;
+  margin:0;
+  padding: 0;
+}
+#catalog > li{
+  display: inline-block;
+  margin: 12px 18px;
+  border: 2px solid #CCCCCC;
+  padding: 12px;
+  border-radius: 4px;
+  width: 250px;
+  vertical-align: top;
+  height: 250px;
+  overflow-y: hidden;
+  position: relative;
+}
+#catalog > li > .price {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: #35c5ed;
+  border-radius: 6px;
+  color: black;
+  padding: 4px;
+  font-weight:bold;
+}

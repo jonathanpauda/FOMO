@@ -1,0 +1,36 @@
+h4.utc-time {
+    color: #AA3333;
+}
+ul{
+    list-style-type: none;
+
+}
+li{
+  list-style-type: none;
+}
+a{
+  color: black;
+}
+#category_list{
+  font-size: 24px;
+  color: #35c5ed;
+}
+
+
+.sidenav2 {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.activeLI{
+  background-color: lightblue;
+  border-radius: 4px;
+  padding: 3px;
+}

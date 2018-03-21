@@ -1,0 +1,52 @@
+<%inherit file="/homepage/templates/app_base.htm" />
+
+
+<%block name="centercontent">
+<h1>Products</h1>
+<a href="/manager/create/"><button class="btn btn-basic" style="float: right;">Create</button></a>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Product Type</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    %for p in products:
+      <tr>
+        <td>${p.category.name}</td>
+        <td>${p.__class__.__name__}</td>
+        <td>${p.name}</td>
+        <td>${p.price}</td>
+        <td>
+            %if hasattr(p, 'quantity'):
+                ${ p.quantity }
+            %else:
+                1
+            %endif
+        </td>
+        <td><a href="/manager/edit/${p.id}">Edit</a></td>
+        <td><a href="/manager/products.delete/${p.id}">Delete</a></td>
+      </tr>
+    %endfor
+
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+</%block>
+
+
+
+
+<!--Category, product type, Name, Price, Quantity and then two empty columns (for the edit and delete buttons-->

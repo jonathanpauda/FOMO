@@ -14,6 +14,9 @@
     </ul>
 </div>
 <img id="mainImage" src=${prod.image_url()} alt = "${prod.name}">
+%if hasattr(prod, "quantity"):
+    <p>Quantity: <span>${prod.quantity}</span></p>
+%endif
 <a class ="btn btn-success">Buy now!</a>
 <div><p>${prod.description}</p></div>
 

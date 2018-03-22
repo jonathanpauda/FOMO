@@ -40,18 +40,19 @@
 </%block>
 
 <%block name="rightcontent">
-<h2>Last Five Items</h2>
-<%
-    if request.dmp.page == 'details':
-        realList= request.last_five [1:6]
-    else:
-        realList= request.last_five [0:5]
-
-
-%>
-%for p in realList:
+    <h2>Last Five Items</h2>
+        <%
+            if request.dmp.page == 'details':
+                realList= request.last_five [1:6]
+            else:
+                realList= request.last_five [0:5]
+        %>
     <ol>
-        <img class = "rightImage" src = "${p.image_url()}"/>
+        %for p in realList:
+            <li>
+                <img class = "rightImage" src = "${p.image_url()}"/>
+                <p>${p.name}</p>
+            </li>
+        %endfor
     </ol>
-%endfor
 </%block>
